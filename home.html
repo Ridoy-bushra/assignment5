@@ -22,7 +22,22 @@
         }
     </style>
 </head>
-<body>
-    <h2>welcome</h2>
+<body class="bg-[#F8FAFC] min-h-screen">
+        <nav class="flex justify-between p-5 bg-white">
+            <div class="flex justify-center items-center gap-3">
+            <img src="./assets/github-logo.png" alt="" class="w-10">
+            <h2 class="font-bold">Github Issues Traker</h2>
+        </div>
+        <div>
+            <div class="join gap-4">
+                <div>
+                    <label class="input validator join-item rounded-sm">
+                    <input type="text" placeholder="🔍︎ search issues" required  id="search-keyword"/>
+                    </label>
+                    </div>
+            <button class="btn btn-primary join-item rounded-sm" id="search-btn">+ New Issue</button>
+            </div>
+        </div>
+        </nav>
 </body>
 </html>
