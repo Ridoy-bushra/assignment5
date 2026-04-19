@@ -41,8 +41,44 @@
         </nav>
         <div class="w-5/6 mx-auto bg-white p-5 mt-14 rounded-sm shadow-sm">
         <button class="btn btn-primary" onclick="switchTab('all')" id="all-btn">All</button>
-        <button class="btn btn-neutral " onclick="switchTab('open')" id="open-btn">Open</button>
-        <button class="btn btn-neutral " onclick="switchTab('close')" id="close-btn">Closed</button>
+        <button class="btn btn-nutral " onclick="switchTab('open')" id="open-btn">Open</button>
+        <button class="btn btn-nutral " onclick="switchTab('close')" id="close-btn">Closed</button>
     </div>
+    <div class="w-5/6 mx-auto bg-white rounded-sm shadow-sm mt-5">
+        <div class="flex justify-between p-5 border-b-2 border-b-black/10">
+            <div class="flex gap-3 justify-center items-center">
+                <img src="./assets/Aperture.png" alt="">
+                <div>
+                    <h2 class="font-bold" id="issue-number">50 Issues</h2>
+                    <p>Track and manage your project issues</p>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <div class="flex gap-3 justify-center items-center">
+                    <div class="rounded-full bg-[#00A96E] w-4 h-4"></div>
+                    <p>open</p>
+                </div>
+                <div class="flex gap-3 justify-center items-center">
+                    <div class="rounded-full bg-[#A855F7] w-4 h-4"></div>
+                    <p>close</p>
+                </div>
+            </div>i
+        </div>
+        <div class="flex justify-center items-center h-screen hidden" id="loader">
+            <span class="loading loading-spinner text-primary"></span>
+        </div>
+        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3" id='card-container'>
+        </div>
+        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden" id='open-container'>
+        </div>
+        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden" id='close-container'>
+        </div>
+        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden" id='search-container'>
+        </div>
+    </div>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div id="modal-container">
+        </div>
+    </dialog>
 </body>
 </html>
