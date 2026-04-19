@@ -24,12 +24,12 @@
 </head>
 <body class="bg-[#F8FAFC] min-h-screen">
         <nav class="flex justify-between p-5 bg-white">
-            <div class="flex justify-center items-center gap-3">
+            <div class="flex justify-center items-center gap-3 ml-20">
             <img src="./assets/github-logo.png" alt="" class="w-10">
-            <h2 class="font-bold">Github Issues Traker</h2>
+            <h2 class="font-semibold">Github Issues Traker</h2>
         </div>
         <div>
-            <div class="join gap-4">
+            <div class="join gap-4 mr-20">
                 <div>
                     <label class="input validator join-item rounded-sm">
                     <input type="text" placeholder="🔍︎ search issues" required  id="search-keyword"/>
@@ -39,5 +39,10 @@
             </div>
         </div>
         </nav>
+        <div class="w-5/6 mx-auto bg-white p-5 mt-14 rounded-sm shadow-sm">
+        <button class="btn btn-primary" onclick="switchTab('all')" id="all-btn">All</button>
+        <button class="btn btn-neutral " onclick="switchTab('open')" id="open-btn">Open</button>
+        <button class="btn btn-neutral " onclick="switchTab('close')" id="close-btn">Closed</button>
+    </div>
 </body>
 </html>
