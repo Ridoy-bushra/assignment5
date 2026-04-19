@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,29 +21,40 @@
         * {
             font-family: "Geist", sans-serif;
         }
+
+        .open {
+            border-top: 5px solid #00A96E;
+            border-radius: 10px;
+        }
+
+        .close {
+            border-top: 5px solid #A855F7;
+            border-radius: 10px;
+        }
     </style>
 </head>
+
 <body class="bg-[#F8FAFC] min-h-screen">
-        <nav class="flex justify-between p-5 bg-white">
-            <div class="flex justify-center items-center gap-3 ml-20">
+    <nav class="flex justify-between p-5 bg-white">
+        <div class="flex justify-center items-center gap-3">
             <img src="./assets/github-logo.png" alt="" class="w-10">
-            <h2 class="font-semibold">Github Issues Traker</h2>
+            <h2 class="font-bold">Github Issues Traker</h2>
         </div>
         <div>
-            <div class="join gap-4 mr-20">
+            <div class="join gap-4">
                 <div>
                     <label class="input validator join-item rounded-sm">
-                    <input type="text" placeholder="🔍︎ search issues" required  id="search-keyword"/>
+                        <input type="text" placeholder="🔍︎ search issues" required  id="search-keyword"/>
                     </label>
-                    </div>
-            <button class="btn btn-primary join-item rounded-sm" id="search-btn">+ New Issue</button>
+                </div>
+                <button class="btn btn-primary join-item rounded-sm" id="search-btn">+ New Issue</button>
             </div>
         </div>
-        </nav>
-        <div class="w-5/6 mx-auto bg-white p-5 mt-14 rounded-sm shadow-sm">
+    </nav>
+    <div class="w-5/6 mx-auto bg-white p-5 mt-14 rounded-sm shadow-sm">
         <button class="btn btn-primary" onclick="switchTab('all')" id="all-btn">All</button>
-        <button class="btn btn-nutral " onclick="switchTab('open')" id="open-btn">Open</button>
-        <button class="btn btn-nutral " onclick="switchTab('close')" id="close-btn">Closed</button>
+        <button class="btn btn-nutral" onclick="switchTab('open')" id="open-btn">Open</button>
+        <button class="btn btn-nutral" onclick="switchTab('close')" id="close-btn">Closed</button>
     </div>
     <div class="w-5/6 mx-auto bg-white rounded-sm shadow-sm mt-5">
         <div class="flex justify-between p-5 border-b-2 border-b-black/10">
@@ -62,23 +74,33 @@
                     <div class="rounded-full bg-[#A855F7] w-4 h-4"></div>
                     <p>close</p>
                 </div>
-            </div>i
+            </div>
         </div>
-        <div class="flex justify-center items-center h-screen hidden" id="loader">
+        <!--loader-->
+        <div class="flex justify-center items-center h-screen hidden " id="loader">
             <span class="loading loading-spinner text-primary"></span>
         </div>
+        <!--issue cards-->
         <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3" id='card-container'>
+            <!--dynamically addong using api fetch-->
         </div>
-        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden" id='open-container'>
+        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden " id='open-container'>
+            <!--dynamically addong using api fetch-->
         </div>
         <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden" id='close-container'>
+            <!--dynamically addong using api fetch-->
         </div>
         <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5 gap-3 hidden" id='search-container'>
+            <!--dynamically addong using api fetch-->
         </div>
     </div>
+    <!-- Open the modal using ID.showModal() method -->
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
         <div id="modal-container">
+            <!--dynamically filled by js-->
         </div>
     </dialog>
+    <script src="script/home.js"></script>
 </body>
+
 </html>
